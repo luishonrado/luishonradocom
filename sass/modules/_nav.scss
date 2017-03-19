@@ -39,7 +39,7 @@
 
     .menu_item {
         position: relative;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Raleway', sans-serif;
         font-size: 17px;
         font-weight: 500;
         text-transform: uppercase;
@@ -75,7 +75,7 @@
 /* - Active state - */
 .menu_active {
     position: relative;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 17px;
     font-weight: 500;
     text-transform: uppercase;
@@ -116,7 +116,7 @@
     overflow: hidden;
 }
 /* Nav media queries */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: $tablet) {
     .nav_desktop {
         display: block;
     }
@@ -125,7 +125,7 @@
         display: none;
     }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: $tablet) {
     body {
         padding-top: 50px;
     }
@@ -324,34 +324,36 @@
         transform: rotate(6deg);
     }
 }
-/* Overlay animation effect */
+
 .overlay-effect {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s, visibility 0s 0.5s;
+
+    nav {
+        perspective: 1200px;
+
+        ul {
+            opacity: 0;
+            transform: translateY(-50%) rotateX(30deg);
+            transition: transform 0.5s ease-in-out, opacity 0.8s ease-in-out;
+        }
+    }
 }
 
 .overlay-effect.open {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.5s;
+
+    nav ul {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
 }
 
-.overlay-effect nav {
-    perspective: 1200px;
-}
-
-.overlay-effect nav ul {
-    opacity: 0;
-    transform: translateY(-50%) rotateX(30deg);
-    transition: transform 0.5s ease-in-out, opacity 0.8s ease-in-out;
-}
-
-.overlay-effect.open nav ul {
-    opacity: 1;
-    transform: rotateX(0deg);
-}
-
-.overlay-effect.close nav ul {
-    transform: translateY(25%) rotateX(-25deg);
+.overlay-effect.close {
+    nav ul {
+        transform: translateY(25%) rotateX(-25deg);
+    }
 }
