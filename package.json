@@ -1,0 +1,37 @@
+{
+  "name": "luishonrado.com",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal website",
+  "main": "Gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-connect": "^5.0.0",
+    "gulp": "^3.9.1",
+    "gulp-webserver": "^0.9.1",
+    "gulp-sass": "^3.1.0",
+    "write-good": "^0.10.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luis Honrado",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luishonrado/luishonrado-com.git"
+  },
+  "keywords": [
+    "personal",
+    "portfolio",
+    "ux",
+    "ui",
+    "design"
+  ],
+  "bugs": {
+    "url": "https://github.com/luishonrado/luishonrado-com/issues"
+  },
+  "homepage": "https://github.com/luishonrado/luishonrado-com#readme"
+}
