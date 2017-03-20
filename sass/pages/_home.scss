@@ -19,137 +19,166 @@ main {
             max-width: 320px;
         }
     }
+    /* Rolling text vertical Sliding */
+    .rolling_text {
+        font-family: 'Playfair Display', serif;
+        color: #36454b;
+        font-size: 60px;
+        font-weight: 300;
+        text-align: left;
+        letter-spacing: 1.2px;
+        line-height: 1.1;
+        padding-bottom: 69px;
+        transition: all 2s ease;
+        @media screen and (min-width: $mobile-small) and (max-width: $mobile-large) {
+            max-width: 320px;
+        }
 
-    .home_p_container {
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .slidingVertical {
+        display: inline;
         position: relative;
+        letter-spacing: 1.2px;
+        @media screen and (max-width: $mobile-small) {
+            overflow-x: hidden;
+        }
 
-        .line-medium {
-            margin: 24px auto 70px;
+        span {
+            animation: topToBottom 8s ease infinite 0s;
+            font-weight: 700;
+            opacity: 0;
+            overflow: visible;
+            position: absolute;
+        }
+    }
+
+    .slidingVertical span:nth-child(2) {
+        animation-delay: 2s;
+    }
+
+    .slidingVertical span:nth-child(3) {
+        animation-delay: 4s;
+    }
+
+    .slidingVertical span:nth-child(4) {
+        animation-delay: 6s;
+    }
+    /* Type fix */
+    .kerning-0 {
+        @media screen and (min-width: $mobile-small) and (max-width: $mobile-large) {
+            letter-spacing: 0;
         }
     }
 }
 
-.home_p {
-    font-family: 'Montserrat', sans-serif;
-    max-width: 550px;
-    color: #36454b;
-    font-size: 18px;
-    font-weight: 400;
-    text-align: left;
-    letter-spacing: 0.7px;
-    line-height: 32px;
-    margin-bottom: 28px;
-    @media screen and (min-width: 320px) and (max-width: 520px) {
-        text-align: left;
-        letter-spacing: 0.2px;
+.btn-scroll {
+    position: absolute;
+    width: 50px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    .bouncy-arrow {
+        animation: bounce 4s infinite;
+    }
+}
+@keyframes bounce {
+    0%,
+    100%,
+    30% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
     }
 }
 
-.read_more {
-    display: flex;
+.flex-fix {
+    flex-direction: column;
+    justify-content: center;
+}
 
-    a {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 14px;
+.home_h2 {
+    h2 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 24px;
+        font-weight: 300;
+        color: #36454b;
+        text-align: center;
         text-transform: uppercase;
-        color: #ED374D;
+        line-height: 1.2;
+        letter-spacing: 4px;
+        margin: 0 auto 16px;
+    }
+
+    .line-medium {
+        margin: 0 auto;
+    }
+}
+
+.home_p_container {
+    position: relative;
+
+    .home_p {
+        font-family: 'Raleway', sans-serif;
+        max-width: 550px;
+        color: #36454b;
+        font-size: 18px;
         font-weight: 400;
         text-align: left;
         letter-spacing: 0.7px;
-    }
-
-    img {
-        height: 10px;
-        padding-top: 1px;
-        padding-left: 10px;
-        transition: all 0.4s ease;
-    }
-
-    &:hover {
-        img {
-            transform: translateX(10px);
+        line-height: 32px;
+        margin-bottom: 28px;
+        margin-top: 40px;
+        @media screen and (min-width: 320px) and (max-width: 520px) {
+            text-align: left;
+            letter-spacing: 0.2px;
         }
     }
-}
-/*** --- ROLLING TEXT --- ***/
-.rolling_text {
-    font-family: 'Playfair Display', serif;
-    color: #36454b;
-    font-size: 60px;
-    font-weight: 300;
-    text-align: left;
-    letter-spacing: 1.2px;
-    line-height: 1.1;
-    padding-bottom: 69px;
-    transition: all 2s ease;
-    @media screen and (min-width: $mobile-small) and (max-width: $mobile-large) {
-        max-width: 320px;
+
+    .read_more {
+        display: flex;
+
+        a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #ED374D;
+            font-weight: 400;
+            text-align: left;
+            letter-spacing: 0.7px;
+        }
+
+        img {
+            height: 10px;
+            padding-top: 1px;
+            padding-left: 10px;
+            transition: all 0.4s ease;
+        }
+
+        &:hover {
+            img {
+                transform: translateX(10px);
+            }
+        }
     }
-
-    span {
-        font-weight: 700;
-    }
-}
-
-.kerning-0 {
-    @media screen and (min-width: $mobile-small) and (max-width: $mobile-large) {
-        letter-spacing: 0;
-    }
-}
-/* Rolling text vertical Sliding */
-.slidingVertical {
-    display: inline;
-    position: relative;
-    letter-spacing: 1.2px;
-    @media screen and (max-width: $mobile-small) {
-        overflow-x: hidden;
-    }
-
-    span {
-        animation: topToBottom 8s ease infinite 0s;
-        font-weight: 700;
-        opacity: 0;
-        overflow: visible;
-        position: absolute;
-    }
-}
-
-.slidingVertical span:nth-child(2) {
-    animation-delay: 2s;
-}
-
-.slidingVertical span:nth-child(3) {
-    animation-delay: 4s;
-}
-
-.slidingVertical span:nth-child(4) {
-    animation-delay: 6s;
 }
 /*** --- CASE STUDIES --- ***/
 .cases_wrapper {
     max-width: 1170px;
     margin: 0 auto;
     padding-bottom: 30vh;
+    padding-top: 20vh;
     @media screen and (min-height: $tablet) and (min-width: $tablet) {
         position: relative;
         top: -40px;
     }
-
-    .line-medium {
-        margin: 10px auto 0;
-    }
-}
-
-.home_h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-weight: 300;
-    color: #36454b;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 1.2;
-    letter-spacing: 4px;
-    margin: 0 auto;
 }
 /* - CASE LEFT - */
 .case_left {
@@ -247,15 +276,17 @@ main {
         }
 
         li {
-            padding-right: 20px;
-            display: inline-flex;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            color: #A8A8B3;
-            letter-spacing: 0.08em;
+          padding: 7px 9px;
+  border: 1px solid;
+  border-radius: 5px;
+  display: inline-flex;
+  font-family: 'raleway', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #36454b;
+  letter-spacing: 0.08em;
             @media screen and (max-width: $mobile-large) {
-                padding: 0 20px 0 0;
+                // padding: 0 20px 0 0;
             }
         }
     }
