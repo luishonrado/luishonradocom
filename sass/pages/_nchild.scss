@@ -30,7 +30,7 @@
         font-family: 'Montserrat', sans-serif;
         font-size: 34px;
         font-weight: 700;
-        color: #36454b;
+        color: $text-main;
         letter-spacing: 0.012em;
         text-transform: none;
     }
@@ -41,7 +41,7 @@
         font-family: 'Raleway', sans-serif;
         font-size: 16px;
         font-weight: 400;
-        color: #36454b;
+        color: $text-main;
         letter-spacing: 0.073em;
         line-height: 24px;
         @media screen and (max-width: $tablet) {
@@ -88,10 +88,10 @@
 
     ul li {
         padding: 0 0 10px;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Raleway", sans-serif;
         font-weight: 400;
         font-size: 16px;
-        color: #171D24;
+        color: $text-main;
         letter-spacing: 1px;
         line-height: 22px;
     }
@@ -132,7 +132,7 @@
 
     .work_p {
         font-family: 'Raleway', Georgia, "Times New Roman", Times, sans-serif;
-        color: #36454b;
+        color: $text-main;
         font-size: 18px;
         font-weight: 500;
         text-align: left;
@@ -144,7 +144,6 @@
 
 .work_image_desktop {
     margin: 80px auto;
-    width: 1000px;
     height: auto;
     border-radius: 5px;
     box-shadow: 0 20px 50px -20px #B6C1CE;

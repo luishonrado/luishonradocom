@@ -8,7 +8,20 @@ footer {
     height: 100vh;
     width: 100%;
     z-index: -100;
-    background: linear-gradient(135deg, rgba(229, 72, 53, 1) 0%, rgba(240, 58, 76, 1) 49%, rgba(202, 22, 93, 1) 100%);
+    background: linear-gradient(233deg, #1c71d5, #e54b45, #c12f75);
+    background-size: 800% 800%;
+    animation: backgroundthing 12s ease infinite;
+    @keyframes backgroundthing {
+      0% {
+        background-position: 0% 87%
+      }
+      50% {
+        background-position: 100% 14%
+      }
+      100% {
+        background-position: 0% 87%
+      }
+    }
 
     .footer-container {
         display: flex;
@@ -79,7 +92,7 @@ footer {
     }
 
     .end {
-        background-color: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 15px 100px 0 rgba(255,255,255,0.3);
         display: flex;
         flex-direction: row-reverse;
         flex-wrap: wrap;
@@ -92,7 +105,7 @@ footer {
         @media only screen and (max-width: $mobile-large) {
             flex-direction: column;
             align-content: center;
-            background-color: rgba(255, 255, 255, 0);
+            box-shadow: 0 15px 100px 0 rgba(255,255,255,0);
         }
 
         .social {
