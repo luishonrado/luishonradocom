@@ -1,9 +1,9 @@
 .btn {
-    margin-top: 40px;
     padding: 18px 0;
     position: relative;
     display: block;
     width: 160px;
+    border-radius: 35px;
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     font-weight: 400;
@@ -12,11 +12,9 @@
     text-transform: uppercase;
     transition: all 0.2s linear;
 }
-
 .btn-active {
     color: #ffffff;
     background-color: #ED374D;
-    border-radius: 35px;
     box-shadow: 0 5px 25px -7px rgba(237, 55, 77, 0.9);
 
     &:hover {
